@@ -1,4 +1,3 @@
-// server.js
 const express = require('express');
 const mysql = require('mysql2');
 const path = require('path');
@@ -8,8 +7,13 @@ dotenv.config();
 
 const app = express();
 
-// Middleware to serve static files from the "public" directory
+// Serve static files from the "public" directory
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Serve index.html from the root directory
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
 
 // Create a connection to the MySQL database
 const db = mysql.createConnection({
@@ -43,4 +47,5 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
+
 
