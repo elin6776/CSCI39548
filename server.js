@@ -1,13 +1,11 @@
+// server.js
 const express = require('express');
-const mysql = require('mysql2');
 const path = require('path');
-const dotenv = require('dotenv');
-
-dotenv.config();
+const fs = require('fs');
 
 const app = express();
 
-// Serve static files from the "public" directory
+// Middleware to serve static files from the "public" directory
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Serve index.html from the root directory
@@ -15,30 +13,21 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// Create a connection to the MySQL database
-const db = mysql.createConnection({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME
-});
-
-db.connect((err) => {
-    if (err) {
-        console.error('Database connection failed:', err);
-        return;
-    }
-    console.log('Connected to the database');
-});
-
-// Endpoint to fetch products
+// Endpoint to fetch products from the JSON file
 app.get('/api/products', (req, res) => {
-    db.query('SELECT * FROM products', (err, results) => {
+    fs.readFile(path.join(__dirname, 'products.json'), 'utf-8', (err, data) => {
         if (err) {
-            console.error('Error fetching products:', err);
-            res.status(500).send('Error fetching products');
-        } else {
-            res.json(results);
+            console.error('Error reading products.json:', err);
+            res.status(500).send('Error reading products data');
+            return;
+        }
+
+        try {
+            const products = JSON.parse(data);
+            res.json(products);
+        } catch (parseErr) {
+            console.error('Error parsing JSON:', parseErr);
+            res.status(500).send('Error parsing products data');
         }
     });
 });

@@ -1,0 +1,110 @@
+[
+    {
+        "name": "Candle 1",
+        "description": "A beautiful scented candle",
+        "price": 19.99,
+        "image_path": "images/one.png",
+        "category": "Scented",
+        "availability_status": "In Stock",
+        "rating": 4.5
+    },
+    {
+        "name": "Candle 2",
+        "description": "A floral candle",
+        "price": 29.99,
+        "image_path": "images/foral.png",
+        "category": "Scented",
+        "availability_status": "Out of Stock",
+        "rating": null
+    },
+    {
+        "name": "Candle 3",
+        "description": "An elegant candle",
+        "price": 39.99,
+        "image_path": "images/two.png",
+        "category": "Scented",
+        "availability_status": "In Stock",
+        "rating": null
+    },
+    {
+        "name": "Candle 4",
+        "description": "Round-shaped candle",
+        "price": 49.99,
+        "image_path": "images/round.png",
+        "category": "Beeswax",
+        "availability_status": "In Stock",
+        "rating": null
+    },
+    {
+        "name": "Candle 5",
+        "description": "An aromatic candle",
+        "price": 49.99,
+        "image_path": "images/o.png",
+        "category": "Unscented",
+        "availability_status": "Out of Stock",
+        "rating": 4.5
+    },
+    {
+        "name": "Candle 6",
+        "description": "Cinnamon-scented candle",
+        "price": 49.99,
+        "image_path": "images/cinammon.png",
+        "category": "Scented",
+        "availability_status": "In Stock",
+        "rating": null
+    },
+    {
+        "name": "Candle 7",
+        "description": "A lovely candle",
+        "price": 49.99,
+        "image_path": "images/beageniice.png",
+        "category": "Soy",
+        "availability_status": "In Stock",
+        "rating": 4.5
+    },
+    {
+        "name": "Candle 8",
+        "description": "Lavender-scented candle",
+        "price": 49.99,
+        "image_path": "images/lavendar.png",
+        "category": "Scented",
+        "availability_status": "In Stock",
+        "rating": 3.5
+    },
+    {
+        "name": "Candle 9",
+        "description": "Leaf-shaped candle",
+        "price": 49.99,
+        "image_path": "images/leaf.png",
+        "category": "Beeswax",
+        "availability_status": "In Stock",
+        "rating": null
+    },
+    {
+        "name": "Candle 10",
+        "description": "A floral candle",
+        "price": 49.99,
+        "image_path": "images/foral2.png",
+        "category": "Scented",
+        "availability_status": "In Stock",
+        "rating": null
+    },
+    {
+        "name": "Candle 11",
+        "description": "Ridged candle",
+        "price": 49.99,
+        "image_path": "images/ridges.png",
+        "category": "Unscented",
+        "availability_status": "Out of Stock",
+        "rating": null
+    },
+    {
+        "name": "Candle 12",
+        "description": "Pink candle",
+        "price": 49.99,
+        "image_path": "images/pink.png",
+        "category": "Soy",
+        "availability_status": "In Stock",
+        "rating": 4.5
+    }
+]
