@@ -3,65 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Candle Shop</title>
+    <title>Shop</title>
 </head>
 <body>
-    <header>
-        <h1>Candle <span style="color:rgb(79, 79, 12);">Cove</span></h1>
-        <hr>
-    </header>
-    
-    <nav>
-        <a href="#">Home</a>
-        <a href="#" class="active">Products</a>
-        <a href="#">About Us</a>
-        <a href="#">Contact</a>
-    </nav>
+    <div class="shop-container">
+        <aside class="filter">
+            <div class="filter-group">
+                <h3>Category:</h3>
+                <ul class="filter-list">
+                    <li class="active"><a href="#">All</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                </ul>
+                <h3>Price Range:</h3>
+                <input type="range" id="price" min="0" max="60">
+                <span>$0 - $60</span>
+            </div>
+        </aside>
 
-    <i class="fas fa-shopping-cart cart"></i>
-
-    <div class="filter-container">
-        <h2>Filter <span style="color:rgb(79, 79, 12);">Products </span></h2>
-        <div class="filter-group">
-            <h3>Category:</h3>
-            <ul class="filter-list">
-                <li class="active"><a href="#">All</a></li>
-                <li><a href="#">Scented</a></li>
-                <li><a href="#">Unscented</a></li>
-                <li><a href="#">Soy</a></li>
-                <li><a href="#">Beeswax</a></li>
-            </ul>
+        <div class="product-grid" id="product-list">
         </div>
-        <div class="filter-group">
-            <h3>Price Range:</h3>
-            <input type="range" id="price" min="0" max="60">
-            <span>$0 - $60</span>
-        </div>
+        <button id="load-more" style="display: none;">Load More</button>
     </div>
 
-    <div class="mobile">
-        <i style="font-size:24px; color:rgb(118, 118, 27);" class="fa">&#xf0b0;</i>
-        <div id="mobile-searchbar">
-            <input type="text" placeholder="Search..." id="searchInput">
-        </div>
-        <div id="hamburgerDiv">
-            <button id="hamburgerBtn" onclick="myDropdownFunction()">&#9776;</button>
-        </div>
-    </div>    
-
-    <div id="searchbar">
-        <input type="text" placeholder="Search..." id="searchInput">
-    </div>
-    <br>
-
-    <div class="product-grid" id="product-list">
-    </div>
-
-    <footer>
-        <p>&copy; 2024 Candle Cove. All rights reserved.</p>
-    </footer>
     <script src="script.js"></script>
-
 </body>
 </html>
+
